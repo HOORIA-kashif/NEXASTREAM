@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import logo from '../assets/logos.png'
 import user from '../assets/user.png'
-import { Link, NavLink, useNavigate , useLocation} from 'react-router-dom'
+import backgroundImage from '../assets/1.jpg' // Import the background image
+import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom'
 import { IoIosSearch } from "react-icons/io"
 import { navItems } from './constant/Navigation'
-import { FaUserCircle } from "react-icons/fa";
+import { FaUserCircle } from "react-icons/fa"
 
 const Header = () => {
   const location = useLocation()
@@ -35,7 +36,7 @@ const Header = () => {
       <header className='fixed top-0 w-full h-16 bg-black/50 z-40'>
         <div className='max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 flex items-center h-full'>
           {/* logo section */}
-          <Link to={'/'} className='flex items-center '>
+          <Link to={'/'} className='flex items-center gap-2'>
             <img src={logo} alt='' width={40} />
             <h4 className='text-red-600 uppercase font-bold'>examstream</h4>
           </Link>
@@ -70,16 +71,15 @@ const Header = () => {
                 <img src={user} alt='' className='w-full h-full' />
               </div>
             ) : (
-              <button onClick={() => setIsLoginOpen(true)} className='text-white
-              text-2xl'><FaUserCircle /></button>
+              <button onClick={() => setIsLoginOpen(true)} className='text-white text-2xl'><FaUserCircle /></button>
             )}
           </div>
         </div>
       </header>
 
-      {/* Login  */}
+      {/* Login Modal */}
       {isLoginOpen && (
-        <div className='fixed inset-0 flex items-center justify-center  z-50' style={{ backgroundImage: "url('src/assets/1.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}>
+        <div className='fixed inset-0 flex items-center justify-center z-50' style={{ backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
           <div className='bg-black p-8 rounded-lg shadow-lg w-96 text-white relative'>
             <button className='absolute top-2 right-3 text-2xl' onClick={() => setIsLoginOpen(false)}>✖</button>
             <h2 className='text-3xl font-bold mb-6 text-center'>Sign In</h2>
