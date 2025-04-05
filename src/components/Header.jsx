@@ -38,7 +38,7 @@ const Header = () => {
           {/* logo section */}
           <Link to={'/'} className='flex items-center gap-2'>
            
-            <h4 className='text-red-600 uppercase font-bold'>examstream</h4>
+            <h4 className='text-red-600 uppercase font-bold'>Nexamstream</h4>
           </Link>
           {/* navitems */}
           <nav className='hidden lg:flex items-center gap-1 ml-5'>
