@@ -35,7 +35,7 @@ const Preloader = ({ children }) => {
                     transition={{ duration: 1, ease: "easeOut" }}
                     className="flex items-center "
                 >
-                    <img src={logo} alt="logo" className="w-12 h-12" />
+                  
                     <h4 className="text-red-600 uppercase font-bold text-3xl tracking-wider">
                     exaStream
                     </h4>
