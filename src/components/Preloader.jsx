@@ -37,7 +37,7 @@ const Preloader = ({ children }) => {
                 >
                   
                     <h4 className="text-red-600 uppercase font-bold text-3xl tracking-wider">
-                    exaStream
+                    NexaStream
                     </h4>
                 </motion.div>
 
