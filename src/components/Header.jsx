@@ -37,7 +37,7 @@ const Header = () => {
         <div className='max-w-screen-xl mx-auto px-4 sm:px-8 lg:px-16 xl:px-20 flex items-center h-full'>
           {/* logo section */}
           <Link to={'/'} className='flex items-center gap-2'>
-            <img src={logo} alt='' width={40} />
+           
             <h4 className='text-red-600 uppercase font-bold'>examstream</h4>
           </Link>
           {/* navitems */}
